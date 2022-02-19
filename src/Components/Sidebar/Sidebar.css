@@ -1,0 +1,133 @@
+.side-bar{
+    background-color: var(--secondary-color-type-1);
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    width: var(--side-bar-half-width);
+    height: 100vh;
+
+    transition: all 0.5s ease;
+}
+
+.side-bar.sidebar-active{
+    width: var(--side-bar-full-width);
+}
+
+.side-bar__header{
+    position: relative;
+}
+
+.side-bar__header-logo{
+    font-size: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.side-bar.sidebar-active .side-bar__header-logo{
+    opacity: 1;
+}
+
+.side-bar__header-logo,
+.side-bar__toogle-button{
+    color: var(--primary-color);
+}
+
+.side-bar__toogle-button{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    line-height: 0;
+    cursor: pointer;
+}
+
+.side-bar.sidebar-active .side-bar__toogle-button{
+    left: 90%;
+    transform: translateY(-50%);
+}
+
+.side-bar__nav-list{
+    margin: 1.8rem 0 0;
+    padding: 0;
+}
+
+.side-bar__nav-item{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.side-bar__nav-item.link-active{
+    background-color: rgba(255, 255, 255, .22);
+}
+
+.side-bar__nav-item-link{
+    color: var(--primary-color) !important;
+    opacity: 0.8;
+    height: 100%;
+    cursor: pointer;
+}
+
+.side-bar__nav-item.link-active .side-bar__nav-item-link{
+    opacity: 1;
+}
+
+.side-bar__nav-item-icon{
+    min-width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.side-bar__nav-item-name{
+    font-size: 1.1rem;
+    margin-top: .2em;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+
+.side-bar.sidebar-active .side-bar__nav-item-name{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.side-bar__nav-item-tool-tip{
+    position: absolute;
+    top: 0;
+    left: calc(var(--side-bar-half-width) + 2.5rem);
+
+    font-size: 1.1rem;
+
+    min-width: 90px;
+    padding: .3em .3em;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-color);
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+
+.side-bar.sidebar-active .side-bar__nav-item-tool-tip{
+    display: none;
+}
+
+.side-bar__nav-item:hover .side-bar__nav-item-tool-tip{
+    top: 50%;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.side-bar__footer{
+    position: absolute;
+    top: 90%;
+}

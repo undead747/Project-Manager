@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,600&display=swap" rel="stylesheet');
+
+.default-mode{
+    /*----------- Color values  ------------*/
+    --primary-color: #ffffff;
+
+    --secondary-color-type-1: #000000;
+    --secondary-color-type-2: #cccccc;
+
+    --button-color-type-1: #fe744f;
+    --button-color-type-2: #b73225;
+
+    /*----------- Spacing values  ------------*/
+    --side-bar-half-width: 70px;
+    --side-bar-full-width: 200px;
+    --side-bar-half-width-val: 70;
+    --side-bar-full-width-val: 200;
+
+    /*---------- Font and typography --------*/
+    /* defined font family */
+    --body-font: 'Open Sans';
+    --banner-font: 'Montserrat';
+    --default-font: sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--body-font), var(--default-font);
+    background-color: var(--primary-color);
+
+    scroll-behavior: smooth;
+}
