@@ -12,10 +12,11 @@
     --button-color-type-2: #b73225;
 
     /*----------- Spacing values  ------------*/
-    --side-bar-half-width: 70px;
-    --side-bar-full-width: 200px;
-    --side-bar-half-width-val: 70;
-    --side-bar-full-width-val: 200;
+    --side-bar-half-width: 50px;
+    --side-bar-half-width--desktop: 70px;
+    --side-bar-full-width: 150px;
+    --icon-size: 35px;
+    --icon-size--desktop: 50px;
 
     /*---------- Font and typography --------*/
     /* defined font family */
@@ -45,4 +46,42 @@ body {
     background-color: var(--primary-color);
 
     scroll-behavior: smooth;
+}
+
+.main{
+    position: relative;
+    z-index: 1;
+    margin-left: var(--side-bar-half-width);
+    transition: all .5s ease;
+}
+
+.main__content{
+    padding: .8em;
+}
+
+.main__curtain{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(204, 204, 204, .7);
+    opacity: 0;
+    transition: all .5s ease;
+    pointer-events: none;
+}
+.side-bar.sidebar-active ~ .main .main__curtain{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+@media only screen and (min-width: 768px) {
+    .side-bar.sidebar-active ~ .main .main__curtain{
+        display: none;
+    }
+    
+    .side-bar.sidebar-active ~ .main{
+        width: calc(100% - var(--side-bar-full-width));
+        margin-left: var(--side-bar-full-width);
+    }
 }
