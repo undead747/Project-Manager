@@ -1,0 +1,11 @@
+.page-title{
+    display: inline-block;
+    font-family: var(--body-font);
+    border-bottom: 3px solid var(--secondary-color-type-1);
+    padding-bottom: .2em;
+    color: var(--secondary-color-type-2);
+}
+
+.page-title > span:last-child{
+    color: var(--secondary-color-type-1);
+}

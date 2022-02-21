@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import * as FaIcons from "react-icons/fa";
-import './Sidebar.css';
-import { SidebarData } from './SideBarData';
+import './sidebar.css';
+import { SidebarData } from '../../SideBarData';
 import { Link } from 'react-router-dom';
 
 export default class Sidebar extends Component {
