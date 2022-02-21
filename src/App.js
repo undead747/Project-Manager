@@ -1,11 +1,10 @@
-import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Sidebar from './Components/Sidebar/Sidebar';
 import { SidebarData } from './SideBarData';
 
 function App() {
-  let SideBarDataButLast = SidebarData.slice(0, -1);
-
+  // let SideBarDataButLast = SidebarData.slice(0, -1);
   return (
     <Router>
       <div className="default-mode">
@@ -13,12 +12,12 @@ function App() {
         <main className='main'>
             <div className='main__curtain'></div>
             <div className='main__content container pt-4'>
-              <Routes>
+              <Switch>
                 {
-                  SideBarDataButLast && SideBarDataButLast.map((item, index) => <Route key={index} path={item.path} element={item.component} />)
+                  SidebarData && SidebarData.map((item, index) => <Route key={index} path={item.path} exact={true} component={item.component} />)
                 }
-                <Route path="/" element={<Navigate replace to="/" />} />
-              </Routes>
+                <Redirect to={'/'} />
+              </Switch>
             </div>
         </main>
       </div>
