@@ -1,7 +1,7 @@
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import ProjectManager from "./Components/ProjectManager/ProjectManager";
-import EditForm from "./Components/EditForm/EditForm";
+import Form from "./Components/Form/Form";
 
 function DummyPage(){
     return <h4>Under Construction</h4>
@@ -30,7 +30,7 @@ export const SidebarData = [
         title: 'Edit',
         path: '/edit',
         icon: <AiIcons.AiOutlineForm/>,
-        component: EditForm
+        component: Form
     },
     {
         title: 'Sign out',

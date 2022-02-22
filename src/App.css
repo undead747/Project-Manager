@@ -84,7 +84,6 @@ body {
     }
 }
 
-
 .main__curtain{
     position: absolute;
     top: 0;
@@ -96,6 +95,10 @@ body {
     opacity: 0;
     transition: all .5s ease;
     pointer-events: none;
+}
+
+.main__content{
+    height: 100vh;
 }
 
 .side-bar.sidebar-active ~ .main .main__curtain{
@@ -113,6 +116,7 @@ body {
 a:focus,
 input:focus,
 select:focus,
+textarea:focus,
 .btn:focus {
     outline: none !important;
     box-shadow: none !important;

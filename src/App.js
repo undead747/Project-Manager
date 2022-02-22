@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Navigate, Redirect, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Sidebar from './Components/Sidebar/Sidebar';
 import { SidebarData } from './SideBarData';

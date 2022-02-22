@@ -1,0 +1,9 @@
+.form__btn > *{
+    width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+    .form__content{
+        border-right: 1px solid var(--secondary-color-type-2);
+    }
+}
